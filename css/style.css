@@ -1,0 +1,448 @@
+    /* Fonts  */
+
+    /* poppin font import  */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+      @font-face {
+        font-family:dodger-Condensed;
+        src: url('../Assets//Fonts//Dodger-Condensed.otf');
+      }
+      
+
+    /* Default *---------------- */
+
+    html{
+        font-family: 'Poppins', sans-serif;
+        color: rgb(255, 255, 255);
+        background-color: #000000;
+        overflow-x: hidden;
+    }
+
+    body{
+        margin: 0;
+    }
+
+     /* radio button size */
+     form input[type="radio"] {
+        height: 2.6vh;
+        width: 2.6vh;
+        accent-color: #035bff;
+       }
+
+    /* remove border for color picker  */
+       input[type="color"] {
+        padding: 0;
+        border-radius: 0;
+      }
+      
+      input[type="color"]::-moz-color-swatch {
+        border: none;
+      }
+      
+      input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+        border-radius: 0;
+      }
+      
+      input[type="color"]::-webkit-color-swatch {
+        border: none;
+      }
+
+
+    /*structure *------------------------------- */
+
+    /* navigation bar  */
+
+    
+    /* flexbox is used here to align items  */
+    nav{
+        height: 15vh;
+        background-color: #121212;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2vw;
+        position: relative;
+        z-index: 1;
+    }
+
+    .logo{
+        font-family:dodger-Condensed;
+        text-transform: uppercase;
+        font-size: 6vh;
+    }
+    .logo a{
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+
+    nav ol{
+        margin: 0;
+        padding: 0;
+        font-weight: 200;
+    }
+
+    /* inline display property is used to order nav elements  */
+    nav ol li{
+       display: inline;
+       font-size: 2.4vh;
+       text-transform: uppercase;
+    }
+
+    nav ol li a{
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 0.8vw;
+    }
+
+    /* here we are targeting 
+
+    /* this is a pseudo class */
+    nav ol li a:hover{
+        opacity: 0.8;
+    }
+
+    nav ol li a:active{
+    text-decoration: underline;
+    }
+
+    #buyNow{
+        border: 1px solid white;
+        padding: 1.2vh 1.5vw;
+        margin-left: 0.8vw;
+        font-weight: 400;
+    }
+
+    #buyNow:hover{
+    color: #121212;
+    background: #ffffff;
+    }
+
+
+
+    /*header *--------------- */
+
+    header{
+        height: 88vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* header background video  */ 
+    iframe {
+        position: absolute;
+        width: 100vw;
+        /*video to maintain 16/9 ratio  */
+        height: calc(100vw * 9/16);
+        pointer-events: none;
+        border: 0;
+        opacity: 0.6;
+    }
+
+    .header-content{
+        position: relative;
+        height: 10vw;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .header-content span:nth-child(1){
+        font-size: 7vh;
+        font-family:dodger-Condensed;
+        transform:scale(1,2);
+    }
+
+    .header-content span:nth-child(2){
+       width: 55%;
+       padding-top: 4vh;
+       font-size: 2.5vh;
+    }
+
+    /*main section*--------------- */
+
+    main{
+        padding: 40px 0px;
+    }
+
+    section{
+        width: 90%;
+        margin: 60px auto;
+        font-size: 3vh;
+        text-align: center;
+        line-height: 5vh;
+    }
+
+
+    /* productInfo section  */
+    /* this css class is used in addition to section css properties  */
+
+    /* this is common photo grid layout  */
+    .photoGrid{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        padding: 9vh 0px;
+    }
+
+    .photoGridColumn{
+        flex: 32.5%;
+        max-width: 32.5%;
+        padding: 0 4px;
+    }
+
+    .photoGridColumn img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+    /* learn more section  ----------*/
+
+    /* this css class is used in addition to section css properties  */
+    .learnMoreCta{
+        height: 70vh;
+        width: 100vw;
+        /* Photo by Rajab Guga on Unsplash */
+        background-image: url('../Assets//Images/homePage/learnMoreImage.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .learnMoreCta-wrapper{
+        background-color: #00000097;
+        display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         width: 100%;
+         height: 100%;
+    }
+
+    .learnMoreCta .learnMoreCta-heading{
+        font-family:dodger-Condensed;
+        transform:scale(1,2);
+        color: rgb(255, 255, 255);
+        font-size: 7vh;
+    }
+
+    .learnMoreCta button{
+        border: 2px solid white;
+        border-radius: 2px;
+        margin-top: 7vh;
+        padding: 2vh;
+        width: 20vw;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        cursor: pointer;
+        background: #ffffff00;
+        font-weight: 500;
+    }
+
+    .learnMoreCta button:hover{
+        color: #121212;
+        background: #ffffff;
+    }
+    
+
+    /* features page ------------------------------------  */
+    
+    /* same property is used for buy now section  */
+    .features,.buyNow{
+        margin: 20px auto;
+    }
+
+    .featureInfo{
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        flex-direction: column;
+        padding-left: 5px;
+    }
+
+    .featureInfo :nth-child(1){
+        font-size: 5vh;
+        font-family:dodger-Condensed;
+    }
+    .featureInfo :nth-child(2){
+        font-size: 2.2vh;
+        padding-top: 1.8vh;
+        line-height: 3.6vh;
+    }
+
+
+
+    /* buy now  page *------------------------ */
+
+    .items{
+        margin: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0vh 0;
+    }
+
+    .items-element{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #121212;
+        width: 90vw;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .items-element img{
+       height: 55vh;
+       width: calc(55vh * 16/9);
+    }
+
+    .items-element div{
+       padding: 0px 2vw;
+     }
+
+    .items-element h1{
+        height: 4vh;
+        text-transform: uppercase;
+        font-family: dodger-Condensed;
+     }
+
+     .items-element span{
+        height: 5vh;
+        font-size: 2vh;
+        width: 90%;
+        padding-bottom: 5vh;
+        line-height: 1vh;
+        overflow: hidden;
+     }
+
+
+    form{
+        padding-top: 1vh;
+        font-size: 2vh;
+    }
+
+    form div{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-transform: uppercase;
+    }
+
+
+    form div input{
+        height: 2.5vh;
+        width: 2.5vh;
+        margin-left: 0.5vw;
+        cursor: pointer;    
+    }
+   
+   
+    input[type="color"] {
+        /* disable select  */
+        pointer-events: none;
+        margin-top: 0.4vh;
+        margin-right: 1vw;
+    }
+
+    /* submit button in buy now form targeted */
+    form input[type="submit"] {
+        width: 94%;
+        text-transform: uppercase;
+        border: 1.5px solid white;
+        background-color: #00000000;
+        color: #ffffff;
+        padding: 2vh;
+        cursor: pointer;
+        font-weight: 500;
+        margin-top: 2%;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #ffffff;
+        color: #121212;
+      }
+      
+    /* Footer *------------------------ */
+
+    footer {
+        height: 32vh;
+        display: flex;
+        background-color: #121212;
+        padding: 5vh;
+        flex-direction: column;
+    }
+
+    .footer-heading{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* overwrites font size of logo  */
+    .footer-logo{
+        font-size: 7vh;
+    }
+
+    .footer-wrapper{
+       width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    
+    .footer-socialMediaIcons {
+        width: 40%;
+        text-align: right;
+    }
+
+    .footer-socialMediaIcons img{
+        height: 3.2vh;
+        padding: 0 0.5vw;
+        cursor: pointer;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+
+    /* this is a pseudo class */
+    .footer-socialMediaIcons img:hover{
+        opacity: 0.7;
+    }
+
+
+    .location-container{
+        padding-right: 2vw;
+        width: 100%;
+        padding-top: 5vh;
+    }
+
+    .location-heading{
+        padding-bottom: 1.8vh;
+        font-size: 2.8;
+    }
+
+    .location-info, .location-postCode{
+        font-size: 2.4vh;
+    }
+    
+    .location-postCode{
+        padding-top: 1vh;
+    }
+
+     /* have added this in footer to make it consistent on all pages  */
+    .footer-bottomInfo{
+        background-color: #000000c7;
+        text-align: center;
+        font-size: 2vh;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        text-transform: uppercase;
+        width: 100vw;
+        padding: 5px;
+    }
